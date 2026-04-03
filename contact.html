@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Nocturne Wellness Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-hero">
+    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1600&q=80" alt="Contact" class="page-hero-bg" />
+    <div class="container page-hero-content">
+      <span class="section-label">We'd Love to Hear From You</span>
+      <h1>Contact Us</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="sep">/</span><span>Contact Us</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact-form" class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="animate-in">
+          <span class="section-label">Get in Touch</span>
+          <h2>Let's start the conversation</h2>
+          <p style="margin:1.25rem 0 2.5rem;">
+            Have questions about classes, memberships, or just want to say hello? We're happy to help you find the perfect way to begin.
+          </p>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <h5>Studio Location</h5>
+              <p>Unit 5B, The Beaufort, 5th Avenue, BGC, Taguig City 1634</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-text">
+              <h5>Phone / WhatsApp</h5>
+              <p>+63 917 123 4567</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-text">
+              <h5>Email</h5>
+              <p>hello@nocturnewellness.ph</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div class="contact-info-text">
+              <h5>Studio Hours</h5>
+              <p>Monday–Friday: 6:00 AM – 9:00 PM<br>Saturday–Sunday: 7:00 AM – 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="animate-in delay-2">
+          <div style="background:var(--white);border:1px solid var(--warm);padding:2.5rem;border-radius:2px;">
+            <h3 style="margin-bottom:1.5rem;">Send us a message</h3>
+
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xykbnwva"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New message from Nocturne Wellness Studio website">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="first_name" placeholder="Jane" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="last_name" placeholder="Doe" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX" />
+              </div>
+
+              <div class="form-group">
+                <label for="topic">What can we help you with?</label>
+                <select id="topic" name="topic" required>
+                  <option value="">Select a topic</option>
+                  <option value="Class Enquiry">Class Enquiry</option>
+                  <option value="Package Information">Package Information</option>
+                  <option value="Private Sessions">Private Sessions</option>
+                  <option value="Corporate Packages">Corporate Packages</option>
+                  <option value="General Enquiry">General Enquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us a bit about yourself and what you're looking for…" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center;">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:420px;background:var(--warm);overflow:hidden;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.802!2d121.0534!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQkdD!5e0!3m2!1sen!2sph!4v1620000000000" 
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="components.js"></script>
+</body>
+</html>
