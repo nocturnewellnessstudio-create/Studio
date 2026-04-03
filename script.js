@@ -1,8 +1,3 @@
-// ============================================================
-// BETTER STUDIO — by Contro Pilates
-// Main JavaScript
-// ============================================================
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Mobile Nav ──────────────────────────────────────────
