@@ -1,10 +1,3 @@
-/* ===========================
-   BETTER STUDIO — RESPONSIVE.CSS
-   Breakpoints:
-     - Tablet: max-width 1024px
-     - Phablet: max-width 768px
-     - Mobile:  max-width 480px
-   =========================== */
 
 /* ===== TABLET (≤ 1024px) ===== */
 @media (max-width: 1024px) {
