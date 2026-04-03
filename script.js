@@ -128,24 +128,59 @@ document.addEventListener('DOMContentLoaded', () => {
     lb.querySelector('.lightbox-overlay').addEventListener('click', () => lb.style.display = 'none');
   }
 
-  // ── Contact Form ────────────────────────────────────────
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = contactForm.querySelector('[type="submit"]');
-      const orig = btn.textContent;
-      btn.textContent = 'Message Sent ✓';
-      btn.disabled = true;
-      btn.style.background = 'var(--green)';
+// ── Contact Form ────────────────────────────────────────
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const btn = contactForm.querySelector('[type="submit"]');
+    const orig = btn.textContent;
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: contactForm.method,
+        body: new FormData(contactForm),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        btn.textContent = 'Sent Successfully ✓';
+        btn.style.background = 'var(--green)';
+        contactForm.reset();
+
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.disabled = false;
+          btn.style.background = '';
+        }, 3000);
+      } else {
+        btn.textContent = 'Failed to Send';
+        btn.style.background = '#c0392b';
+
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.disabled = false;
+          btn.style.background = '';
+        }, 3000);
+      }
+    } catch (error) {
+      btn.textContent = 'Failed to Send';
+      btn.style.background = '#c0392b';
+
       setTimeout(() => {
         btn.textContent = orig;
         btn.disabled = false;
         btn.style.background = '';
-        contactForm.reset();
       }, 3000);
-    });
-  }
+    }
+  });
+}
 
   // ── Auth Forms ──────────────────────────────────────────
   const authForm = document.querySelector('.auth-form');
