@@ -35,7 +35,7 @@
   <a href="faq.html">FAQ</a>
   <a href="pricing.html">Pricing</a>
   <a href="membership-benefits.html">Membership</a>
-  <a href="location.html">Location</a>
+  <a href="contact.html">Location</a>
   <a href="contact.html">Contact Us</a>
 </div>`;
 
@@ -73,7 +73,7 @@
         <ul class="footer-links">
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="location.html">Location</a></li>
+          <li><a href="contact.html">Location</a></li>
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms &amp; Conditions</a></li>
         </ul>
