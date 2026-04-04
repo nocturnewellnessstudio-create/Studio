@@ -35,7 +35,7 @@
   <a href="faq.html">FAQ</a>
   <a href="pricing.html">Pricing</a>
   <a href="membership-benefits.html">Membership</a>
-  <a href="contact.html">Location</a>
+  <a href="contact.html#location">Location</a>
   <a href="contact.html">Contact Us</a>
 </div>`;
 
@@ -73,7 +73,7 @@
         <ul class="footer-links">
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Location</a></li>
+          <li><a href="contact.html#location">Location</a></li>
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms &amp; Conditions</a></li>
         </ul>
@@ -90,11 +90,11 @@
   </div>
 </footer>`;
 
-  const navWrapper = document.createElement('div');
+  const navWrapper = document.createElement("div");
   navWrapper.innerHTML = NAV_HTML;
   document.body.insertBefore(navWrapper, document.body.firstChild);
 
-  const footerWrapper = document.createElement('div');
+  const footerWrapper = document.createElement("div");
   footerWrapper.innerHTML = FOOTER_HTML;
   document.body.appendChild(footerWrapper);
 })();
